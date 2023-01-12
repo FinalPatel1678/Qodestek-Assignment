@@ -1,0 +1,30 @@
+{
+  "name": "Qodestek Assignment",
+  "packageManager": "yarn@3.3.1",
+  "version": "1.0.0",
+  "private": true,
+  "npmClient": "yarn",
+  "useWorkspaces": true,
+  "scripts": {
+    "server:dev": "yarn workspace server dev",
+    "server:start": "yarn workspace server start",
+    "frontend:start": "yarn workspace frontend start",
+    "frontend:build": "yarn workspace frontend build",
+    "frontend:serve": "yarn workspace frontend serve",
+    "clean": "shx rm -rf ./**/node_modules"
+  },
+  "workspaces": {
+    "packages": [
+      "packages/*"
+    ]
+  },
+  "devDependencies": {
+    "@types/node": "^18.11.18",
+    "@yarnpkg/sdks": "^3.0.0-rc.35",
+    "shx": "^0.3.4",
+    "typescript": "*"
+  },
+  "engines": {
+    "node": "v19.4.1"
+  }
+}
